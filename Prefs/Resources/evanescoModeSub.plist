@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+	
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Elements To Be Evanesco'd:</string>
+		</dict>
+		<dict>
+ 			<key>cell</key>
+ 			<string>PSLinkCell</string>
+ 			<key>label</key>
+ 			<string>Time And Date</string>
+ 			<key>detail</key>
+ 			<string>DRSEvanescoSubPrefsListController</string>
+ 			<key>DRSEvanescoSub</key>
+ 			<string>evanescoTimeDateSub</string>
+ 		</dict>
+		<dict>
+ 			<key>cell</key>
+ 			<string>PSLinkCell</string>
+ 			<key>label</key>
+ 			<string>FaceID Lock</string>
+ 			<key>detail</key>
+ 			<string>DRSEvanescoSubPrefsListController</string>
+ 			<key>DRSEvanescoSub</key>
+ 			<string>evanescoFaceIDLockSub</string>
+ 		</dict>
+		 <dict>
+ 			<key>cell</key>
+ 			<string>PSLinkCell</string>
+ 			<key>label</key>
+ 			<string>Notifications</string>
+ 			<key>detail</key>
+ 			<string>DRSEvanescoSubPrefsListController</string>
+ 			<key>DRSEvanescoSub</key>
+ 			<string>evanescoNotificationsSub</string>
+ 		</dict>
+		 <dict>
+ 			<key>cell</key>
+ 			<string>PSLinkCell</string>
+ 			<key>label</key>
+ 			<string>Quick Actions</string>
+ 			<key>detail</key>
+ 			<string>DRSEvanescoSubPrefsListController</string>
+ 			<key>DRSEvanescoSub</key>
+ 			<string>evanescoQuickActionsSub</string>
+ 		</dict>
+
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Animation Curve:</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkListCell</string>
+			<key>default</key>
+			<integer>0</integer>
+			<key>detail</key>
+			<string>PSListItemsController</string>
+			<key>defaults</key>
+			<string>love.litten.dresspreferences</string>
+			<key>label</key>
+			<string>Curve:</string>
+			<key>key</key>
+			<string>animationCurve</string>
+			<key>validValues</key>
+			<array>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>2</integer>
+				<integer>3</integer>
+			</array>
+			<key>validTitles</key>
+			<array>
+				<string>EaseInOut</string>
+				<string>EaseIn</string>
+				<string>EaseOut</string>
+				<string>Linear</string>
+			</array>
+			<key>PostNotification</key>
+			<string>love.litten.dresspreferences/ReloadPrefs</string>
+		</dict>
+
+	</array>
+	<key>title</key>
+	<string>Dress</string>
+</dict>
+</plist>
