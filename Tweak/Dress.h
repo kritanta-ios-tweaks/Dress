@@ -99,6 +99,9 @@ NSString* customLockDurationControl = @"0";
 @interface SBUIProudLockIconView : UIView
 @end
 
+@interface BSUICAPackageView : UIView
+@end
+
 // Homebar
 @interface CSHomeAffordanceView : UIView
 @end
