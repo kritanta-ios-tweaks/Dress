@@ -607,7 +607,7 @@ BOOL kalmInstalled = NO;
 		NSLog(@"Dress: Kalm Detected");
 		#endif
 
-		//kalmInstalled = YES;
+		kalmInstalled = YES;
 	}
 
 	if (!dpkgInvalid && enabled) {
