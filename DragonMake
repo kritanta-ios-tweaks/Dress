@@ -26,6 +26,6 @@ DressPrefs:
     - DRSSubPrefsListController.m 
     - DRSTimeDateSubPrefsListController.m 
     - DuoTwitterCell.m 
-    - KRLinkCell.m 
-    - KRTableCell.m 
-    - KRTwitterCell.m
+    - DRSLinkCell.m 
+    - DRSTableCell.m 
+    - DRSTwitterCell.m
