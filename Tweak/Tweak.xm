@@ -9,9 +9,7 @@ BOOL enabled;
 // BOOL quickActionsTimerRunning = NO;
 
 /*
-
 	I Deleted The Evanesco Mode Code For Now Until I Find A Better Way To Do It
-
 */
 
 BOOL revealed = NO;

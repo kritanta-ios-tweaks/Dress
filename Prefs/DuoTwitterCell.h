@@ -1,5 +1,5 @@
-#import "KRLinkCell.h"
+#import "DRSLinkCell.h"
 
-@interface DuoTwitterCell : KRTableCell
+@interface DuoTwitterCell : DRSTableCell
 
 @end

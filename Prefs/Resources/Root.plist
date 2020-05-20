@@ -183,7 +183,7 @@
 		</dict>
 		<dict>
 			<key>cellClass</key>
-			<string>KRTwitterCell</string>
+			<string>DRSTwitterCell</string>
 			<key>label</key>
 			<string>Mr. Rager</string>
 			<key>accountName</key>
@@ -191,7 +191,7 @@
 		</dict>
 		<dict>
 			<key>cellClass</key>
-			<string>KRTwitterCell</string>
+			<string>DRSTwitterCell</string>
 			<key>label</key>
 			<string>kritanta</string>
 			<key>accountName</key>
