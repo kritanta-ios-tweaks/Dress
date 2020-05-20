@@ -16,9 +16,12 @@ BOOL enabled;
 
 BOOL revealed = NO;
 
-%group Dress
+BOOL kalmInstalled = NO;
+
 
 // Time And Date
+
+%group TimeAndDate
 
 %hook SBFLockScreenDateView
 
@@ -106,7 +109,11 @@ BOOL revealed = NO;
 
 %end
 
+%end
+
 // FaceID Lock
+
+%group FaceID
 
 %hook SBUIProudLockIconView
 
@@ -136,7 +143,11 @@ BOOL revealed = NO;
 
 %end
 
+%end
+
 // Homebar
+
+%group Homebar 
 
 %hook CSHomeAffordanceView
 
@@ -159,7 +170,11 @@ BOOL revealed = NO;
 
 %end
 
+%end
+
 // Swipe Text And CC Grabber
+
+%group SwipeTextAndCCGrabber
 
 %hook CSTeachableMomentsContainerView // iX iOS 13
 
@@ -246,7 +261,11 @@ BOOL revealed = NO;
 
 %end
 
+%end
+
 // Notifications
+
+%group Notifications
 
 %hook NCNotificationListView
 
@@ -385,7 +404,11 @@ BOOL revealed = NO;
 
 %end
 
+%end
+
 // Quick Actions
+
+%group QuickActions
 
 %hook CSQuickActionsView
 
@@ -575,14 +598,35 @@ BOOL revealed = NO;
 	// [preferences registerObject:&animationCurveControl default:@"0" forKey:@"animationCurve"];
 	[preferences registerObject:&customLockDurationControl default:@"0" forKey:@"customLockDuration"];
 
+	NSFileManager *fileManager = [NSFileManager defaultManager];
+
+	NSString *pathForFile = @"/Library/MobileSubstrate/DynamicLibraries/Kalm.dylib";
+
+	if ([fileManager fileExistsAtPath:pathForFile]){ 
+		#ifdef DEBUG
+		NSLog(@"Dress: Kalm Detected");
+		#endif
+
+		//kalmInstalled = YES;
+	}
+
 	if (!dpkgInvalid && enabled) {
         BOOL ok = false;
         
-        ok = ([[NSFileManager defaultManager] fileExistsAtPath:[NSString stringWithFormat:@"/var/lib/dpkg/info/%@%@%@%@%@%@%@%@%@%@%@.dress.md5sums", @"l", @"o", @"v", @"e", @".", @"l", @"i", @"t", @"t", @"e", @"n"]]
+        ok = ([fileManager fileExistsAtPath:[NSString stringWithFormat:@"/var/lib/dpkg/info/%@%@%@%@%@%@%@%@%@%@%@.dress.md5sums", @"l", @"o", @"v", @"e", @".", @"l", @"i", @"t", @"t", @"e", @"n"]]
         );
 
         if (ok && [@"litten" isEqualToString:@"litten"]) {
-            %init(Dress);
+			
+			if (!kalmInstalled)
+				%init(TimeAndDate);
+			
+			%init(FaceID);
+			%init(Homebar);
+			%init(SwipeTextAndCCGrabber);
+			%init(Notifications);
+			%init(QuickActions);
+
             return;
         } else {
             dpkgInvalid = YES;
