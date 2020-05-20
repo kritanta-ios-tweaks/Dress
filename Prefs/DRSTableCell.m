@@ -1,13 +1,13 @@
 //
-// KRTableCell.m
+// DRSTableCell.m
 //  
 // This code is directly from HBTintedTableCell in Cephie 
-// Apache 2.0 License for code used in KRPrefsLicense located in preference bundle
+// Apache 2.0 License for code used in DRSPrefsLicense located in preference bundle
 //
 
-#import "KRTableCell.h"
+#import "DRSTableCell.h"
 
-@implementation KRTableCell
+@implementation DRSTableCell
 
 - (void)tintColorDidChange {
 	[super tintColorDidChange];

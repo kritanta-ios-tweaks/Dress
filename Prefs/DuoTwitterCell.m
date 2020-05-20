@@ -6,7 +6,7 @@
 //	The way this checks screen width is flawed, so dont use this till this 
 //	message is no longer here :)
 //
-//	Apache 2.0 License for cephei code used in KRPrefsLicense located in preference bundle
+//	Apache 2.0 License for cephei code used in DRSPrefsLicense located in preference bundle
 //
 
 
@@ -17,7 +17,7 @@
 #import <UIKit/UIColor+Private.h>
 #import <version.h>
 
-@interface KRLinkCell ()
+@interface DRSLinkCell ()
 
 - (BOOL)shouldShowAvatar;
 

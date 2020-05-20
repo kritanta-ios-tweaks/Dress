@@ -1,6 +1,6 @@
-#import "KRTableCell.h"
+#import "DRSTableCell.h"
 
-@interface KRLinkCell : KRTableCell
+@interface DRSLinkCell : DRSTableCell
 
 @property (nonatomic, readonly) BOOL isBig;
 

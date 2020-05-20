@@ -1,31 +1,31 @@
 
 //
-// KRTwitterCell.m
+// DRSTwitterCell.m
 // Twitter cell that locally loads pfps 
 //		based on Cephei Framework
 //
-// Apache 2.0 License for code used in KRPrefsLicense located in preference bundle
+// Apache 2.0 License for code used in DRSPrefsLicense located in preference bundle
 //
 
 
-#import "KRTwitterCell.h"
+#import "DRSTwitterCell.h"
 #import <Preferences/PSSpecifier.h>
 #import <UIKit/UIImage+Private.h>
 #import <Foundation/Foundation.h>
 
-@interface KRLinkCell ()
+@interface DRSLinkCell ()
 
 - (BOOL)shouldShowAvatar;
 
 @end
 
-@interface KRTwitterCell () {
+@interface DRSTwitterCell () {
 	NSString *_user;
 }
 
 @end
 
-@implementation KRTwitterCell
+@implementation DRSTwitterCell
 
 + (NSString *)_urlForUsername:(NSString *)user {
 

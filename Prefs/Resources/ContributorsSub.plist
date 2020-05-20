@@ -13,7 +13,7 @@
 		</dict>
 		<dict>
 			<key>cellClass</key>
-			<string>KRTwitterCell</string>
+			<string>DRSTwitterCell</string>
 			<key>label</key>
 			<string>Tomer</string>
 			<key>accountName</key>
@@ -21,7 +21,7 @@
 		</dict>
 		<dict>
 			<key>cellClass</key>
-			<string>KRTwitterCell</string>
+			<string>DRSTwitterCell</string>
 			<key>label</key>
 			<string>Tinko Vialard</string>
 			<key>accountName</key>
@@ -29,7 +29,7 @@
 		</dict>
 		<dict>
 			<key>cellClass</key>
-			<string>KRTwitterCell</string>
+			<string>DRSTwitterCell</string>
 			<key>label</key>
 			<string>taki</string>
 			<key>accountName</key>
@@ -37,7 +37,7 @@
 		</dict>
 		<dict>
 			<key>cellClass</key>
-			<string>KRTwitterCell</string>
+			<string>DRSTwitterCell</string>
 			<key>label</key>
 			<string>Ryan🌧</string>
 			<key>accountName</key>
@@ -45,7 +45,7 @@
 		</dict>
 		<dict>
 			<key>cellClass</key>
-			<string>KRTwitterCell</string>
+			<string>DRSTwitterCell</string>
 			<key>label</key>
 			<string>AyanAmySSBU</string>
 			<key>accountName</key>
@@ -53,7 +53,7 @@
 		</dict>
 		<dict>
 			<key>cellClass</key>
-			<string>KRTwitterCell</string>
+			<string>DRSTwitterCell</string>
 			<key>label</key>
 			<string>firewarm</string>
 			<key>accountName</key>
@@ -61,7 +61,7 @@
 		</dict>
 		<dict>
 			<key>cellClass</key>
-			<string>KRTwitterCell</string>
+			<string>DRSTwitterCell</string>
 			<key>label</key>
 			<string>serotonin</string>
 			<key>accountName</key>

@@ -1,16 +1,10 @@
-//
-// KRLinkCell.m
-// Based on Cephei's link cell
-//
-// Apache 2.0 License for code used in KRPrefsLicense located in preference bundle
-//
-#import "KRLinkCell.h"
+#import "DRSLinkCell.h"
 #import <Preferences/PSSpecifier.h>
 #import <UIKit/UIColor+Private.h>
 #import <UIKit/UIImage+Private.h>
 #import <version.h>
 
-@implementation KRLinkCell
+@implementation DRSLinkCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier specifier:(PSSpecifier *)specifier 
 {
