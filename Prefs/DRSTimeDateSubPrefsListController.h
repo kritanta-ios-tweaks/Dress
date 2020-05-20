@@ -9,8 +9,12 @@
 @interface DRSAppearanceSettings : HBAppearanceSettings
 @end
 
-@interface DRSTimeDateSubPrefsListController : HBListController
+@interface DRSTimeDateSubPrefsListController : HBListController{
+    UITableView * _table;
+}
 
+@property (nonatomic, retain) UIView *headerView;
+@property (nonatomic, retain) UIImageView *headerImageView;
 @property (nonatomic, retain) UILabel *titleLabel;
 
 - (void)setCellForRowAtIndexPath:(NSIndexPath *)indexPath enabled:(BOOL)enabled;

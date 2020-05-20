@@ -32,7 +32,44 @@
         [self setCellForRowAtIndexPath:[NSIndexPath indexPathForRow:8 inSection:0] enabled:NO];
         [self setCellForRowAtIndexPath:[NSIndexPath indexPathForRow:9 inSection:0] enabled:NO];
         [self setCellForRowAtIndexPath:[NSIndexPath indexPathForRow:10 inSection:0] enabled:NO];
+    }
 
+	NSFileManager *fileManager = [NSFileManager defaultManager];
+
+	NSString *pathForFile = @"/Library/MobileSubstrate/DynamicLibraries/Kalm.dylib";
+
+	if ([fileManager fileExistsAtPath:pathForFile])
+    {
+        [self setCellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] enabled:NO];
+        [self setCellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] enabled:NO];
+        [self setCellForRowAtIndexPath:[NSIndexPath indexPathForRow:2 inSection:0] enabled:NO];
+        [self setCellForRowAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:0] enabled:NO];
+        [self setCellForRowAtIndexPath:[NSIndexPath indexPathForRow:4 inSection:0] enabled:NO];
+        [self setCellForRowAtIndexPath:[NSIndexPath indexPathForRow:5 inSection:0] enabled:NO];
+        [self setCellForRowAtIndexPath:[NSIndexPath indexPathForRow:6 inSection:0] enabled:NO];
+        [self setCellForRowAtIndexPath:[NSIndexPath indexPathForRow:7 inSection:0] enabled:NO];
+        [self setCellForRowAtIndexPath:[NSIndexPath indexPathForRow:8 inSection:0] enabled:NO];
+        [self setCellForRowAtIndexPath:[NSIndexPath indexPathForRow:9 inSection:0] enabled:NO];
+        [self setCellForRowAtIndexPath:[NSIndexPath indexPathForRow:10 inSection:0] enabled:NO];
+        [self setCellForRowAtIndexPath:[NSIndexPath indexPathForRow:11 inSection:0] enabled:NO];
+        [self setCellForRowAtIndexPath:[NSIndexPath indexPathForRow:12 inSection:0] enabled:NO];
+        [self setCellForRowAtIndexPath:[NSIndexPath indexPathForRow:13 inSection:0] enabled:NO];
+
+        self.headerView = [[UIView alloc] initWithFrame:CGRectMake(0,0,200,100)];
+        self.headerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,200,100)];
+        self.headerImageView.contentMode = UIViewContentModeScaleAspectFill;
+        self.headerImageView.image = [UIImage imageWithContentsOfFile:@"/Library/PreferenceBundles/DressPrefs.bundle/KalmAlert@3x.png"];
+        self.headerImageView.translatesAutoresizingMaskIntoConstraints = NO;
+
+        [self.headerView addSubview:self.headerImageView];
+        [NSLayoutConstraint activateConstraints:@[
+            [self.headerImageView.topAnchor constraintEqualToAnchor:self.headerView.topAnchor],
+            [self.headerImageView.leadingAnchor constraintEqualToAnchor:self.headerView.leadingAnchor],
+            [self.headerImageView.trailingAnchor constraintEqualToAnchor:self.headerView.trailingAnchor],
+            [self.headerImageView.bottomAnchor constraintEqualToAnchor:self.headerView.bottomAnchor],
+        ]];
+
+        _table.tableHeaderView = self.headerView;
     }
 
 }
@@ -56,6 +93,11 @@
     return false;
 }
 
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    tableView.tableHeaderView = self.headerView;
+    return [super tableView:tableView cellForRowAtIndexPath:indexPath];
+}
 - (void)setCellForRowAtIndexPath:(NSIndexPath *)indexPath enabled:(BOOL)enabled {
 
     UITableViewCell *cell = [self tableView:self.table cellForRowAtIndexPath:indexPath];
