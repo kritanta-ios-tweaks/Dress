@@ -1,0 +1,31 @@
+---
+name: Dress
+icmd: sbreload
+
+Dress:
+  type: tweak
+  include:
+    - ./Tweak/
+  frameworks:
+    - Cephei
+  logos_files:
+    - Tweak/Tweak.xm
+
+DressPrefs:
+  type: prefs
+  dir: Prefs
+  frameworks:
+    - Preferences
+    - Cephei
+    - CepheiPrefs
+  arc: no
+  objc_files:
+    - DRSAppearanceSettings.m
+    - DRSEvanescoSubPrefsListController.m
+    - DRSRootListController.m
+    - DRSSubPrefsListController.m 
+    - DRSTimeDateSubPrefsListController.m 
+    - DuoTwitterCell.m 
+    - KRLinkCell.m 
+    - KRTableCell.m 
+    - KRTwitterCell.m
